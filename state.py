@@ -3,6 +3,7 @@
 import re
 import time
 
+
 class State():
     'State of a game of UNO™, like if there\'s a game and so on…'
 
@@ -21,7 +22,7 @@ class State():
             for r in regs:
                 if r.search(msg):
                     self.running = desired_state
-                    print('{} matched for "{}", state = {}'.format(msg, r, desired_state))
+                    print('"{}" matched; state is {}'.format(msg, desired_state))
                     break
 
         pos_regs = map(re.compile, [
